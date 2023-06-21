@@ -61,3 +61,4 @@ jobs:
           app-name: 'wetroweb'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1800E1E7836840DCA806658B258601E0 }}
+          package: backend
