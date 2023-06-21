@@ -53,17 +53,6 @@ jobs:
         with:
           name: python-app
           path: backend
-      
-      - name: Create and start virtual environment
-        run: |
-          python -m venv backend/venv
-          source backend/venv/bin/activate
-        
-      - name: Install dependencies
-        run: pip install -r backend/requirements.txt
-      
-      - name: Run Django
-        run: python backend/manage.py runserver
         
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
