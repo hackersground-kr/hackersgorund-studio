@@ -8,7 +8,7 @@ dotenv.load_dotenv(env_file)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = os.environ["SECRET_KEY"]
+SECRET_KEY = '1234'
 
 DEBUG = True
 
