@@ -54,6 +54,10 @@ jobs:
           name: python-app
           path: backend
       
+      - name: Start virtual environment
+        run: |
+          source backend/venv/bin/activate
+      
       - name: Run Django
         run: python backend/manage.py runserver
         
