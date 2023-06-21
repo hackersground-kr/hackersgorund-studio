@@ -6,8 +6,8 @@ name: Build and deploy Python app to Azure Web App - wetroweb
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - backend/**
   workflow_dispatch:
 
 jobs:
@@ -37,7 +37,7 @@ jobs:
         with:
           name: python-app
           path: |
-            . 
+            .backend
             !venv/
 
   deploy:
@@ -52,7 +52,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: python-app
-          path: .
+          path: .backend
           
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
