@@ -55,8 +55,8 @@ jobs:
           path: backend
       
       - name: Run Django
-        run: python manage.py runserver
-          
+        run: python backend/manage.py runserver
+        
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
